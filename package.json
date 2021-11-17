@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Wences81/nodejs-homework-01#readme",
   "dependencies": {
+    "commander": "^8.3.0",
     "uuidv4": "^6.2.12"
   },
   "devDependencies": {
