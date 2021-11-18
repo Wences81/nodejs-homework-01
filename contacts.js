@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require("uuid")
-const fs = require("fs/promises");
+const fs = require("fs").promises;
 const path = require("path");
-const { readFile } = require("fs");
+
 
 const contactsPath = path.resolve("./db/contacts.json");
 
@@ -60,7 +60,7 @@ async function addContact(name, email, phone) {
 }
 
 
-module.export = {
+module.exports = {
   listContacts,
   getContactById,
   removeContact,
