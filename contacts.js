@@ -52,7 +52,7 @@ async function addContact(name, email, phone) {
     const contacts = await fs.readFile(contactsPath, "utf8");
     const parsedContacts = JSON.parse(contacts);
     const newContactList = [...parsedContacts, newContact]
-    await fs.readFile(contactsPath, JSON.stringify(newContactList, null, 2), "utf8")
+    await fs.writeFile(contactsPath, JSON.stringify(newContactList, null, 2), "utf8")
     return newContactList;
   } catch (error) {
     console.log(error.message)
